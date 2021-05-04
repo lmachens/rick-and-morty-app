@@ -1,3 +1,4 @@
+import { createCharacterElement } from './components/character';
 import './style.css';
 import { createElement } from './utils/elements';
 
@@ -19,7 +20,17 @@ const mainElement = createElement('main', {
     }),
     createElement('section', {
       className: 'results',
-      children: [createElement('div', { innerText: 'No result' })],
+      children: [
+        createCharacterElement({
+          imgSrc: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+          name: 'Rick Sanchez',
+          status: 'alive',
+          species: 'Human',
+          origin: {
+            name: 'Earth',
+          },
+        }),
+      ],
     }),
     createElement('footer', {
       className: 'footer',

@@ -24,7 +24,7 @@ const mainElement = createElement('main', {
         createCharacterElement({
           imgSrc: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
           name: 'Rick Sanchez',
-          status: 'alive',
+          status: 'Alive',
           species: 'Human',
           origin: {
             name: 'Earth',

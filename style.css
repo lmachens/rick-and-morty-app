@@ -70,8 +70,10 @@ body {
 }
 
 .results {
+  padding: 3em 0;
   background: var(--secondary-color);
-  padding: 5em 8em;
+  display: grid;
+  place-items: center;
 }
 
 .footer {

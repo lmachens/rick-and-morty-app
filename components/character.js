@@ -12,10 +12,14 @@ export function createCharacterElement({
     className: 'character-card',
     children: [
       createElement('img', { src: imgSrc }),
-      createElement('h2', { innerText: name }),
-      createElement('p', { innerText: status }),
-      createElement('p', { innerText: species }),
-      createElement('p', { innerText: origin.name }),
+      createElement('div', {
+        className: 'character-card__info',
+        children: [
+          createElement('h2', { innerText: name }),
+          createElement('p', { innerText: `${status} - ${species}` }),
+          createElement('p', { innerText: origin.name }),
+        ],
+      }),
     ],
   });
 }

@@ -29,7 +29,7 @@ const mainElement = createElement('main', {
               const characterElements = characters.map(createCharacterElement);
               characterSection.append(...characterElements);
             });
-          }, 0),
+          }, 300),
         }),
       ],
     }),

@@ -74,6 +74,7 @@ body {
   background: var(--secondary-color);
   display: grid;
   place-items: center;
+  row-gap: 1em;
 }
 
 .footer {

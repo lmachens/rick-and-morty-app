@@ -1,27 +1,16 @@
 import { createCharacterElement } from './components/character';
 import './style.css';
 import { createElement } from './utils/elements';
+import { getCharacters } from './utils/api';
 
-const characters = [
-  {
-    imgSrc: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-    name: 'Rick Sanchez',
-    status: 'Alive',
-    species: 'Human',
-    origin: {
-      name: 'Earth',
-    },
-  },
-  {
-    imgSrc: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-    name: 'Morty Smith',
-    status: 'Alive',
-    species: 'Human',
-    origin: {
-      name: 'Earth',
-    },
-  },
-];
+getCharacters().then((characters) => {
+  const characterElements = characters.map(createCharacterElement);
+  characterSection.append(...characterElements);
+});
+
+const characterSection = createElement('section', {
+  className: 'results',
+});
 
 const mainElement = createElement('main', {
   children: [
@@ -39,10 +28,7 @@ const mainElement = createElement('main', {
         }),
       ],
     }),
-    createElement('section', {
-      className: 'results',
-      children: characters.map(createCharacterElement),
-    }),
+    characterSection,
     createElement('footer', {
       className: 'footer',
       children: [

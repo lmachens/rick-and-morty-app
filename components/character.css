@@ -1,0 +1,21 @@
+.character-card {
+  display: grid;
+  grid-auto-flow: column;
+  background: var(--background-color);
+  border-radius: 0.5em;
+}
+
+.character-card__image {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  height: 14em;
+}
+
+.character-card__info {
+  padding: 1em;
+  display: grid;
+  justify-items: start;
+}
+.character-card__info * {
+  margin: 0;
+}

@@ -1,4 +1,4 @@
-export async function getCharacters() {
+export function getCharacters() {
   return fetch('https://rickandmortyapi.com/api/character').then((response) =>
     response.json()
   );

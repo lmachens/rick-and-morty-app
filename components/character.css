@@ -5,7 +5,7 @@
   border-radius: 0.5em;
 }
 
-.character-card img {
+.character-card__image {
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
   height: 14em;
@@ -14,7 +14,6 @@
 .character-card__info {
   padding: 1em;
   display: grid;
-  grid-auto-flow: row;
   justify-items: start;
 }
 .character-card__info * {

@@ -11,8 +11,8 @@ export function createCharacterElement({
   return createElement('div', {
     className: 'character-card',
     children: [
-      createElement('img', { src: imgSrc }),
-      createElement('div', {
+      createElement('img', { className: 'character-card__image', src: imgSrc }),
+      createElement('article', {
         className: 'character-card__info',
         children: [
           createElement('h2', { innerText: name }),

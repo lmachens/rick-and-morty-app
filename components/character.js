@@ -2,6 +2,7 @@ import './character.css';
 import { createElement } from '../utils/elements';
 
 export function createCharacterElement({
+  id,
   image,
   name,
   status,
@@ -11,7 +12,15 @@ export function createCharacterElement({
   return createElement('div', {
     className: 'character-card',
     children: [
-      createElement('img', { className: 'character-card__image', src: image }),
+      createElement('a', {
+        href: `/details.html?id=${id}`,
+        children: [
+          createElement('img', {
+            className: 'character-card__image',
+            src: image,
+          }),
+        ],
+      }),
       createElement('article', {
         className: 'character-card__info',
         children: [
